@@ -1,12 +1,10 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * zachowajta mój email i róbta co chceta.
  */
 
 /*
  * File:   csv.cpp
- * Author: user
+ * Author: fajnysoft@gmail.com
  *
  * Created on 22 kwietnia 2017, 19:27
  */
@@ -28,21 +26,22 @@ csv::csv(string fName) {
 }
 
 csv::~csv() {
-    file.close();
+    csv::file.close();
 }
 
 void csv::addToRecord(float fPomiar){
     char sPomiar[32];
-
+    setlocale(LC_ALL, "Polish");
     sprintf(sPomiar, "%f", fPomiar);
     csv::record += sPomiar;
     csv::record += ";";
-    cout<<csv::record<<endl;
+    setlocale(LC_ALL, "USA");
+    //cout<<csv::record<<endl;
 }
-
 
 void csv::storeRecord(){
     csv::record = csv::record.substr(0, csv::record.size()-1);
     csv::record += "\n";
     csv::file.write(csv::record.c_str(), csv::record.size());
+    csv::record = "";
 }

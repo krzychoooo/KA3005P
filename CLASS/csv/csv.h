@@ -1,12 +1,10 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * zachowajta mÃ³j email i rÃ³bta co chceta.
  */
 
 /*
  * File:   csv.h
- * Author: user
+ * Author: fajnysoft@gmail.com
  *
  * Created on 22 kwietnia 2017, 19:27
  */
@@ -31,12 +29,12 @@ public:
      * \return void
      */
     csv(string);
-    /**\<html><h2>funkcja dopisuj¹ca do rekordu kolejne pomiary</h2><p>tworzy liniê w pliku csv kolejne wartoœci rozdzielone znakiem ';'</p></html>
+    /**\<html><h2>funkcja dopisujÄ…ca do rekordu kolejne pomiary</h2><p>tworzy liniÄ™ w pliku csv kolejne wartoÅ›ci rozdzielone znakiem';' Znak dziesiÄ™tny to ','</p></html>
      * \param fPomiar float
      * \return void
      */
     void addToRecord(float);
-    /**\<html><h2>zapisuje do pliku kolejny rekord (liniê)</h2><p></p></html>
+    /**\<html><h2>zapisuje do pliku kolejny rekord </h2><p></p></html>
      * \return void
      */
     void storeRecord();
