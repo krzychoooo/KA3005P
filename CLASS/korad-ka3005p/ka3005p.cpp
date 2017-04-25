@@ -39,7 +39,7 @@ ka3005p::ka3005p(int com) {
                 }
             }
 
-            printf("received %i bytes: %s\n", n, (char *) buf);
+            //printf("received %i bytes: %s\n", n, (char *) buf);
         }
     //printf("-com=%d\n\r", ka3005p::comport_number);
     Sleep(200);
@@ -68,7 +68,7 @@ ka3005p::ka3005p(int com, int baud, const char *mode) {
                 }
             }
 
-            printf("received %i bytes: %s\n", n, (char *) buf);
+            //printf("received %i bytes: %s\n", n, (char *) buf);
         }
     //printf("-com=%d\n\r", ka3005p::comport_number+1);
     Sleep(200);
