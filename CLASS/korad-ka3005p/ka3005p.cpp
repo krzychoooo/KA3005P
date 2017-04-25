@@ -148,7 +148,7 @@ float ka3005p::getPower(int ch){
     current = current + 0.1*(buf[2]-0x30);
     current = current + 0.01*(buf[3]-0x30);
     current = current + 0.001*(buf[4]-0x30);
-    printf("prad=%f\n",current);
+    //printf("prad=%f\n",current);
 
     char command2[6]={'V','O','U','T'};
     snprintf(&command2[4], 3, "%d?", ch);
@@ -173,9 +173,9 @@ float ka3005p::getPower(int ch){
     voltage = voltage + 1.0*(buf[1]-0x30);
     voltage = voltage + 0.1*(buf[3]-0x30);
     voltage = voltage + 0.01*(buf[4]-0x30);
-    printf("nap=%f\n",voltage);
+    //printf("nap=%f\n",voltage);
     power = voltage * current;
-    printf("power=%f W \n",power);
+    //printf("power=%f W \n",power);
     Sleep(50);
     return power;
 }
